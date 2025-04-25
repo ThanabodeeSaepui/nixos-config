@@ -84,3 +84,11 @@ To get started with this setup, follow these steps:
 
 Feel free to fork the repository and submit pull requests if you'd like to contribute improvements. Open issues if you encounter any problems with the config or have ideas for new features.
 
+## Eessential command
+```bash
+sudo nixos-rebuild switch --flake ~/nixos-config
+home-manager switch --flake ~/nixos-config
+
+sudo nix store gc
+sudo nix store verify --repair --all
+```
