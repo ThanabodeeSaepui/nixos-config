@@ -9,11 +9,8 @@
     code-cursor
     imv
     mpv
-    obs-studio
-    obsidian
     pavucontrol
     teams-for-linux
-    telegram-desktop
     vesktop
 
     # CLI utils
@@ -26,7 +23,7 @@
     fzf
     git-graph
     grimblast
-    htop
+    btop
     hyprpicker
     ntfs3g
     mediainfo
@@ -46,9 +43,9 @@
     zip
 
     # Coding stuff
-    openjdk23
-    nodejs
-    python311
+    go
+    bun
+    python313
 
     # WM stuff
     libsForQt5.xwaylandvideobridge

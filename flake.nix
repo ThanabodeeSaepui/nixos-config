@@ -15,6 +15,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    vscode-server.url = "github:nix-community/nixos-vscode-server";
+
     # COMING SOON...
     #nixvim = {
     #  url = "github:nix-community/nixvim";
@@ -22,7 +24,14 @@
     #};
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: let
+  outputs = { 
+    self, 
+    nixpkgs,
+    home-manager,
+    vscode-server,
+    ... 
+  } @inputs: 
+  let
     system = "x86_64-linux";
     homeStateVersion = "24.11";
     user = "safe";
@@ -38,6 +47,10 @@
 
       modules = [
         ./hosts/${hostname}/configuration.nix
+        vscode-server.nixosModules.default
+        ({ config, pkgs, ... }: {
+          services.vscode-server.enable = true;
+        })
       ];
     };
 

@@ -23,8 +23,8 @@ To get started with this setup, follow these steps:
 2. **Clone the Repository**:
 
 	```bash
-    git clone https://github.com/Andrey0189/nixos-config-reborn
-    cd nixos-config-reborn
+    git clone https://github.com/ThanabodeeSaepui/nixos-config
+    cd nixos-config
     ```
 
 3. **Copy one of the hosts configuration to set up your own**:
@@ -38,7 +38,7 @@ To get started with this setup, follow these steps:
 4. **Put your `hardware-configuration.nix` file there**:
 
     ```bash
-    cp /etc/nixos/hardware-configuration.nix ./
+    cp /etc/nixos/hardware-configuration.nix ./hosts/nixos/
     ```
 
 5. **Edit `hosts/<your_hostname>/local-packages.nix` and `nixos/packages.nix` files if needed**:
